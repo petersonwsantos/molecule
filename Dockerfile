@@ -59,7 +59,7 @@ python3-dev \
 "
 RUN apk add --update --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ ${PACKAGES}
 
-ENV MOLECULE_EXTRAS="docker,docs,windows,lint"
+ENV MOLECULE_EXTRAS="docker,docs,windows,lint,gce"
 
 ENV MOLECULE_PLUGINS="\
 molecule-azure \
@@ -169,6 +169,9 @@ molecule-libvirt \
 molecule-lxd \
 molecule-openstack \
 molecule-vagrant \
+gcloud \
+apache-libcloud \
+pycrypto \
 "
 
 RUN \
